@@ -12,7 +12,46 @@
   <script src='/js/app/keys.js'></script>
 </head>
 <body>
-  <!-- #map-canvas -->
+  <div class='row'>
+    <div class='small-12 columns'>
+      <h1>Concert Tickets</h1>
+    </div>
+  </div>
+  <div class='row'>
+    <div class='small-4 columns'>
+      <select>
+        <option value='ga'>General Admission</option>
+        <option value='vip'>VIP Section</option>
+      </select>
+    </div>
+    <div class='small-2 columns'>
+      <input id='numOfSeats' placeholder='35' type='text'>
+    </div>
+    <div class='small-2 columns'>
+      <input id='priceOfSeats' placeholder='$100.00' type='text'>
+    </div>
+    <div class='small-1 columns'>
+      <input class='button radius small' id='createSection' type='button' value='Create Section'>
+    </div>
+    <div class='small-3 columns'>
+      <input id='name' placeholder='customer name' type='text'>
+    </div>
+  </div>
+  <div class='row'>
+    <div class='small-12 columns'>
+      <div id='stage'></div>
+    </div>
+  </div>
+  <div class='row'>
+    <div class='small-12 columns'>
+      <div id='vipsection'></div>
+    </div>
+  </div>
+  <div class='row'>
+    <div class='small-12 columns'>
+      <div id='gasection'></div>
+    </div>
+  </div>
   <script src='/js/vendor/jquery-1.10.2.js'></script>
   <script src='/js/vendor/foundation.min.js'></script>
   <script src='/js/vendor/underscore.js'></script>
