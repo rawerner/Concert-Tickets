@@ -9,19 +9,19 @@ function setupTest(){
 function teardownTest(){
 }
 
-test('section Creation', function(){
-  expect(4);
+// test('section Creation', function(){
+//   expect(4);
 
-  $('#select').val('ga');
-  $('#numOfSeats').val('13');
-  $('#priceofSeats').val('100');
-  $('#createSection').trigger('click');
+//   $('#select').val('ga');
+//   $('#numOfSeats').val('13');
+//   $('#priceofSeats').val('100');
+//   $('#createSection').trigger('click');
 
-  deepEqual($('#gasection > table').length, 1, 'Should have created a table');
-  deepEqual($('#gasection > table > tbody > tr').length, 2, 'Should have created a table row');
-  deepEqual($('#gasection > table > tbody > tr:nth-child(1) > td').length, 7, 'Should have created 7 columns in row 1');
-  deepEqual($('#gasection > table > tbody > tr:nth-child(2) > td').length, 6, 'Should have created 6 columns in row 2');
-});
+//   deepEqual($('#gasection > table').length, 1, 'Should have created a table');
+//   deepEqual($('#gasection > table > tbody > tr').length, 2, 'Should have created a table row');
+//   deepEqual($('#gasection > table > tbody > tr:nth-child(1) > td').length, 7, 'Should have created 7 columns in row 1');
+//   deepEqual($('#gasection > table > tbody > tr:nth-child(2) > td').length, 6, 'Should have created 6 columns in row 2');
+// });
 
 test('removing option', function(){
   expect(1);
@@ -47,4 +47,14 @@ test('double click adds name', function(){
 
   deepEqual($('#gasection > table > tbody > tr:first-child > td:first-child > span').text(), 'Rachel', 'Should have Rachel inside td');
 
+});
+
+test('Seats are assigned a letter and number', function(){
+  expect(1);
+  $('#select').val('ga');
+  $('#numOfSeats').val('13');
+  $('#priceofSeats').val('100');
+  $('#createSection').trigger('click');
+
+  deepEqual($('#gasection > table > tbody > tr:first-child > td:first-child').text(), 'A1', 'First seat should read A1');
 });
