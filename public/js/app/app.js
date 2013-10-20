@@ -72,56 +72,18 @@ function htmlCreateTable(numOfSeats){
 }
 
 function htmlCreateFullRows(alphabet, numberOfFullRows, $table){
+  var alphabetCounter = 0;
   for(var i = 0; i < numberOfFullRows; i++){
-    var j = 1;
     var $tr = $('<tr>');
-    var $td1 = $('<td>');
-    $td1.text(alphabet[i] + j);
-    j++;
-    var $td2 = $('<td>');
-    $td2.text(alphabet[i] + j);
-    j++;
-    var $td3 = $('<td>');
-    $td3.text(alphabet[i] + j);
-    j++;
-    var $td4 = $('<td>');
-    $td4.text(alphabet[i] + j);
-    j++;
-    var $td5 = $('<td>');
-    $td5.text(alphabet[i] + j);
-    j++;
-    var $td6 = $('<td>');
-    $td6.text(alphabet[i] + j);
-    j++;
-    var $td7 = $('<td>');
-    $td7.text(alphabet[i] + j);
-    j++;
-    var $td8 = $('<td>');
-    $td8.text(alphabet[i] + j);
-    j++;
-    var $td9 = $('<td>');
-    $td9.text(alphabet[i] + j);
-    j++;
-    var $td10 = $('<td>');
-    $td10.text(alphabet[i] + j);
-    j++;
-    var $td11 = $('<td>');
-    $td11.text(alphabet[i] + j);
-    j++;
-    var $td12 = $('<td>');
-    $td12.text(alphabet[i] + j);
-    j++;
-    var $td13 = $('<td>');
-    $td13.text(alphabet[i] + j);
-    j++;
-    var $td14 = $('<td>');
-    $td14.text(alphabet[i] + j);
-    j++;
-    $tr.append($td1, $td2, $td3, $td4, $td5, $td6, $td7, $td8, $td9, $td10, $td11, $td12, $td13, $td14 );
-    $tr.children('td').addClass('seat');
+    for (var j = 0; j < 14; j++){
+      var $td = $('<td>');
+      $td.addClass('seat');
+      $td.text(alphabet[alphabetCounter] + (j+1));
+      $tr.append($td);
+    }
+    alphabetCounter++;
     $table.append($tr);
   }
-
 }
 
 function htmlCreateLastRow(alphabet, seatsInLastRow, $table, numberOfFullRows){
@@ -194,3 +156,13 @@ function canRun(flag){
 // -------------------------------------------------------------------- //
 // -------------------------------------------------------------------- //
 // -------------------------------------------------------------------- //
+
+
+
+
+
+
+
+
+
+
