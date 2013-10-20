@@ -4,15 +4,16 @@
 .row
   .small-4.columns
     %select
-      %option{value: 'ga'} General Admission
-      %option{value: 'vip'} VIP Section
+      %option.gasection{value: '#gasection'} General Admission
+      %option.vipsection{value: '#vipsection'} VIP Section
   .small-2.columns
     %input#numOfSeats{type: 'text', placeholder: '35'}
   .small-2.columns
     %input#priceOfSeats{type: 'text', placeholder: '$100.00'}
-  .small-1.columns
+  .small-4.columns
     %input#createSection.button.radius.small{type: 'button', value: 'Create Section'}
-  .small-3.columns
+.row
+  .small-12.columns
     %input#name{type: 'text', placeholder: 'customer name'}
 .row
   .small-12.columns
