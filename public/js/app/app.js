@@ -46,6 +46,16 @@ function clickAddName(){
 
   $this.addClass('reserved');
   $this.append($span);
+
+  var galist = [];
+  var viplist = [];
+  var ga = {};
+  var vip = {};
+
+  ga.price =
+  ga.reserved = $('td .reserved');
+
+
   //}
 
 }

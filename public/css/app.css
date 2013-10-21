@@ -56,3 +56,6 @@ h4 {
 p {
   line-height: 1.0;
   margin-bottom: 0; }
+
+ul {
+  list-style: none; }
