@@ -47,19 +47,28 @@ function clickAddName(){
   $this.addClass('reserved');
   $this.append($span);
 
-  var galist = [];
-  var viplist = [];
-  var ga = {};
-  var vip = {};
-
-  ga.price =
-  ga.reserved = $('td .reserved');
-
-
+  trackStats($this);
   //}
-
 }
 
+
+function trackStats($this){
+  var galist = [];
+  var viplist = [];
+  if ($this.hasClass('gasection')){
+    var ga = {};
+    ga.price =
+    ga.reserved = $('td .reserved');
+    galist.push(ga);
+  } else if ($this.hasClass('vipsection')){
+    var vip = {};
+    vip.price =
+    vip.reserved = $('td.reserved');
+    viplist.push(vip);
+  }
+
+}
+  //}
 // -------------------------------------------------------------------- //
 // -------------------------------------------------------------------- //
 // -------------------------------------------------------------------- //
