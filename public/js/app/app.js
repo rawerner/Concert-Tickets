@@ -62,48 +62,44 @@ function htmlCreateTable(numOfSeats){
   var numberOfFullRows = numOfSeats / 14;
   numberOfFullRows = Math.floor(numberOfFullRows);
   var seatsInLastRow = numOfSeats % 14;
-
-  htmlCreateFullRows(numberOfFullRows, $table);
+  var alphabet = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
+  htmlCreateFullRows(alphabet, numberOfFullRows, $table);
   if (seatsInLastRow){
-    htmlCreateLastRow(seatsInLastRow, $table);
+    htmlCreateLastRow(alphabet, seatsInLastRow, $table, numberOfFullRows);
   }
 }
 
-function htmlCreateFullRows(numberOfFullRows, $table){
-
+function htmlCreateFullRows(alphabet, numberOfFullRows, $table){
+  var alphabetCounter = 0;
   for(var i = 0; i < numberOfFullRows; i++){
     var $tr = $('<tr>');
-    var $td1 = $('<td>');
-    var $td2 = $('<td>');
-    var $td3 = $('<td>');
-    var $td4 = $('<td>');
-    var $td5 = $('<td>');
-    var $td6 = $('<td>');
-    var $td7 = $('<td>');
-    var $td8 = $('<td>');
-    var $td9 = $('<td>');
-    var $td10 = $('<td>');
-    var $td11 = $('<td>');
-    var $td12 = $('<td>');
-    var $td13 = $('<td>');
-    var $td14 = $('<td>');
-    $tr.append($td1, $td2, $td3, $td4, $td5, $td6, $td7, $td8, $td9, $td10, $td11, $td12, $td13, $td14 );
-    $tr.children('td').addClass('seat');
+    for (var j = 0; j < 14; j++){
+      var $td = $('<td>');
+      $td.addClass('seat');
+      var $p = $('<p>');
+      $p.text(alphabet[alphabetCounter] + (j+1));
+      $td.append($p);
+      $tr.append($td);
+    }
+    alphabetCounter++;
     $table.append($tr);
   }
-
 }
 
-function htmlCreateLastRow(seatsInLastRow, $table){
+function htmlCreateLastRow(alphabet, seatsInLastRow, $table, numberOfFullRows){
   var $tr = $('<tr>');
 
   for(var i = 0; i < seatsInLastRow; i++){
     var $td = $('<td>');
     $td.addClass('seat');
+    var $p = $('<p>')
+    $p.text(alphabet[numberOfFullRows] + (i+1));
+    $td.append($p);
     $tr.append($td);
   }
   $table.append($tr);
 }
+
 
 
 function htmlRemoveOption($option){
@@ -157,3 +153,4 @@ function canRun(flag){
 // -------------------------------------------------------------------- //
 // -------------------------------------------------------------------- //
 // -------------------------------------------------------------------- //
+

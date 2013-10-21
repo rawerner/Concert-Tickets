@@ -44,5 +44,15 @@ table tr {
   background: red; }
 
 span {
-  font-size: 10px;
-  color: #fff; }
+  font-size: 11px;
+  color: #fff;
+  max-width: 34px; }
+
+h4 {
+  color: #fff;
+  text-align: center;
+  padding-top: 30px; }
+
+p {
+  line-height: 1.0;
+  margin-bottom: 0; }
