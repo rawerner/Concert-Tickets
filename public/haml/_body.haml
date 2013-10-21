@@ -1,14 +1,49 @@
 .row.firstrow
-  .small-12.columns
-    %h1 Concert Tickets
-.row.hidden
-  .small-3.columns
-    %p Total Money
-  .small-3.columns
-    %p People
-  .small-3.columns
-    %p Test
-  .small-3.columns
+  .small-5.columns
+    %h1.title Concert Tickets
+    .small-12.columns.hidden
+      %h2 Ticket Reports
+    .small-12.columns.hidden
+      %table.report
+        %thead
+          %tr
+            %th
+            %th Tickets Sold
+            %th Ticket Price
+            %th Section Gross
+        %tbody
+          %tr
+            %th General Admission
+            %td.gasectiontickets 0
+            %td.gasectionprice $0
+            %td.gasectiongross $0
+          %tr
+            %th V.I.P.
+            %td.vipsectiontickets 0
+            %td.vipsectionprice $0
+            %td.vipsectiongross $0
+    .small-12.columns.hidden
+      %h4 Grand Totals
+      .small-12.columns.hidden
+        .small-6.columns
+          %div Tickets Sold
+        .small-6.columns
+          %div Gross
+      .small-12.columns.hidden
+        .small-6.columns
+          %input#grandtickets{type:'text', placeholder:'0'}
+        .small-6.columns
+          %input#grandgross{type:'text', placeholder:'$0.00'}
+  .small-2.columns
+  .small-5.columns.hidden
+    .small-12.columns
+      %h3 Guest List
+    .small-12.columns
+      .small-6.columns
+        %ul#galist General Admission
+      .small-6.columns#bordercontainer
+        %ul#viplist V.I.P.
+
 .row
   .small-4.columns
     %select
@@ -21,7 +56,7 @@
   .small-4.columns
     %input#createSection.button.radius.small{type: 'button', value: 'Create Section'}
 .row
-  .small-12.columns
+  .small-5.columns
     %input#name{type: 'text', placeholder: 'customer name'}
 .row
   .small-12.columns

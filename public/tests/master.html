@@ -16,21 +16,71 @@
   <div id='qunit'></div>
   <div id='qunit-fixture'>
     <div class='row firstrow'>
-      <div class='small-12 columns'>
-        <h1>Concert Tickets</h1>
+      <div class='small-5 columns'>
+        <h1 class='title'>Concert Tickets</h1>
+        <div class='small-12 columns hidden'>
+          <h2>Ticket Reports</h2>
+        </div>
+        <div class='small-12 columns hidden'>
+          <table class='report'>
+            <thead>
+              <tr>
+                <th></th>
+                <th>Tickets Sold</th>
+                <th>Ticket Price</th>
+                <th>Section Gross</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th>General Admission</th>
+                <td class='gasectiontickets'>0</td>
+                <td class='gasectionprice'>$0</td>
+                <td class='gasectiongross'>$0</td>
+              </tr>
+              <tr>
+                <th>V.I.P.</th>
+                <td class='vipsectiontickets'>0</td>
+                <td class='vipsectionprice'>$0</td>
+                <td class='vipsectiongross'>$0</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class='small-12 columns hidden'>
+          <h4>Grand Totals</h4>
+          <div class='small-12 columns hidden'>
+            <div class='small-6 columns'>
+              <div>Tickets Sold</div>
+            </div>
+            <div class='small-6 columns'>
+              <div>Gross</div>
+            </div>
+          </div>
+          <div class='small-12 columns hidden'>
+            <div class='small-6 columns'>
+              <input id='grandtickets' placeholder='0' type='text'>
+            </div>
+            <div class='small-6 columns'>
+              <input id='grandgross' placeholder='$0.00' type='text'>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-    <div class='row hidden'>
-      <div class='small-3 columns'>
-        <p>Total Money</p>
+      <div class='small-2 columns'></div>
+      <div class='small-5 columns hidden'>
+        <div class='small-12 columns'>
+          <h3>Guest List</h3>
+        </div>
+        <div class='small-12 columns'>
+          <div class='small-6 columns'>
+            <ul id='galist'>General Admission</ul>
+          </div>
+          <div class='small-6 columns' id='bordercontainer'>
+            <ul id='viplist'>V.I.P.</ul>
+          </div>
+        </div>
       </div>
-      <div class='small-3 columns'>
-        <p>People</p>
-      </div>
-      <div class='small-3 columns'>
-        <p>Test</p>
-      </div>
-      <div class='small-3 columns'></div>
     </div>
     <div class='row'>
       <div class='small-4 columns'>
@@ -50,7 +100,7 @@
       </div>
     </div>
     <div class='row'>
-      <div class='small-12 columns'>
+      <div class='small-5 columns'>
         <input id='name' placeholder='customer name' type='text'>
       </div>
     </div>

@@ -33,6 +33,10 @@
   background: #ccc;
 }
 
+#bordercontainer {
+  border-left: 1px solid black;
+}
+
 table{
   width: 100%;
 }
@@ -62,4 +66,46 @@ span{
 
 .hidden {
   display: none;
+}
+
+h2 {
+  text-align: center;
+}
+
+h3 {
+  text-align: center;
+}
+
+h4 {
+  text-align: center;
+}
+
+.report {
+  border: none;
+}
+
+.report th, .report td {
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+.report > thead > tr:first-child > th:first-child {
+  background-color: white;
+}
+
+.report tr > th:last-child, .report tr > td:last-child {
+  border-right: none;
+}
+
+.report tbody tr:last-child td, .report tbody tr:last-child th {
+  border-bottom: none;
+}
+
+ul {
+  list-style-type: none;
+  text-align: center;
+}
+
+li {
+  text-align: center;
 }
